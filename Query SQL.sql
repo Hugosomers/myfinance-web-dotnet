@@ -30,3 +30,7 @@ values
 	('Dividendos', 'R');
 
 select * from planoconta;
+
+insert into transacao(historico, tipo, valor, planocontaid, data)
+values 
+	('Viagem', 'D', 422, 3, '20230122 00:00:00');

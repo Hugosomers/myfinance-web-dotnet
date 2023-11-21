@@ -8,7 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<MyFinanceDbContext>();
 builder.Services.AddTransient<IPlanoContaService, PlanoContaService>();
+builder.Services.AddTransient<ITransacaoService, TransacaoService>();
 builder.Services.AddAutoMapper(typeof(PlanoContaMap));
+builder.Services.AddAutoMapper(typeof(TransacaoMap));
 
 var app = builder.Build();
 
